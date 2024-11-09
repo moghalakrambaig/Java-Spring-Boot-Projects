@@ -1,0 +1,305 @@
+Transpilers/Transcompilers:
+Transpilers are source-to-source converters.
+They convert codes from one high-level language, say Java, to another high-level language with a similar level of abstraction, say C++.
+
+Websites:
+Websites are more static, providing information and content.
+Web Applications:
+While web applications are dynamic, designed for more interaction with end users.
+
+Library:
+A Library is a collection pre-written code components like functions, classes and modules that can be re-used to perform a specific task.
+The main concept of libraries is to provide reusable funtionality.
+
+Examples:
+React
+Numpy
+Pandas
+
+Framework:
+A Framework is like a structure that provides everything to develop a complete application.
+It is a set of tools and libraries. It simplifies development process and reduce errors.
+
+Example:
+Angular
+Spring
+Ruby on Rails
+Django
+
+Babel:
+Babel is a free and open-source JavaScript transcompiler that is mainly used to convert ECMAScript 2015+ code into backwards-compatible JavaScript code that can be run by
+older JavaScript engines.
+
+
+
+React:
+It is a open-source JavaScript UI library created by Facebook.
+It is used to create UI for web apps, mobile apps.
+UI are created out of individual pieces called components.
+
+The major features of React are:
+Uses JSX syntax, a syntax extension of JS that allows developers to write HTML in their JS code.
+It uses Virtual DOM instead of Real DOM considering that Real DOM manipulations are expensive.
+Supports server-side rendering which is useful for Search Engine Optimizations(SEO).
+Follows Unidirectional or one-way data flow or data binding.
+Uses reusable/composable UI components to develop the view.
+
+
+
+DOM - Document Object Model:
+It is a structured representation of the HTML elements that are present in a webpage or web app.
+The DOM is represented as a tree data structure. It contains a node for each UI element present in the web document. 
+
+Virtual DOM:
+React uses Virtual DOM which is like a lightweight copy of the actual DOM.
+Manipulating DOM is slow, but manipulating Virtual DOM is fast as nothing gets drawn on the screen.
+So each time there is a change in the state of our application, the virtual DOM gets updated first instead of the real DOM.
+
+How does virtual DOM actually make things faster?
+When anything new is added to the application, a new virtual DOM is created and it is represented as a tree. Each element in the application is a node in this tree.
+React compares it with the previous virtual DOM. Comparison is done by Diffing Algorithm.
+After this, it finds the best possible ways to make these changes to the real DOM.
+Now only the updated elements will get rendered on the page, rather than wasting time on updating the entire page.
+
+React Reconciliation is the process through which React updates the Browser DOM.
+
+createRoot vs ReactDOM.render
+the primary distinction between createRoot and ReactDOM.render is that createRoot generates a new root container for rendering components,
+whereas ReactDOM.render renders components directly to a given DOM element.
+
+create a react app in react 18:
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <h1>Hey 11</h1>
+)
+
+
+
+What is JSX?
+JSX stands for JavaScript XML. JSX is a syntax extension to JavaScript.
+JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement() and/or appendChild() methods.
+JSX converts HTML tags into react elements.
+JSX is stricter than HTML. You have to close tags like <br />.
+Your component also can’t return multiple JSX tags. You have to wrap them into a shared parent, like a <div>...</div> or an empty <>...</> wrapper.
+
+Example:
+const jsx = <h1>This is JSX</h1>
+
+But the browser does not understand this JSX because it's not valid JavaScript code.
+This is because we're assigning an HTML tag to a variable that is not a string but just HTML code.
+So to convert it to browser understandable JavaScript code, we use a tool like Babel which is a JavaScript compiler/transpiler.
+
+Example:
+function AboutPage() {
+  return (
+    <>
+      <h1>About</h1>
+      <p>Hello there.<br />How do you do?</p>
+    </>
+  );
+}
+
+
+
+React Component:
+React apps are made out of components. Components are independent and reusable bits of code.
+A component is a piece of the UI (user interface) that has its own logic and appearance.
+A component can be as small as a button, or as large as an entire page.
+You can net one component into another component
+React component names must always start with a capital letter, while HTML tags must be lowercase.
+A Component returns HTML
+
+Two main types of components are 
+Class component
+Functional component
+
+Class Component:
+A class component must include the extends React.Component statement.
+This statement creates an inheritance to React.Component, and gives your component access to React.Component's functions.
+The component also requires a render() method, this method returns HTML
+
+Example:
+class Car extends React.Component {
+  render() {
+    return <h2>Hi, I am a Car!</h2>;
+  }
+}
+
+
+Functional Component:
+A Function component also returns HTML, and behaves much the same way as a Class component, but Function components can be written using much less code, are easier to understand.
+
+Example:
+function Car() {
+  return <h2>Hi, I am a Car!</h2>;
+}
+
+When to use a Class Component over a Function Component?
+After the addition of Hooks(i.e. React 16.8 onwards) it is always recommended to use Function components over Class components in React.
+Because you could use state, lifecycle methods and other features that were only available in class component in function component too.
+
+
+
+React Props:
+Props simply stands for properties. They pass data from one component to another (from parent to child).
+Props act as a channel for component communication. Props are passed from parent to child and help your child access properties that made it into the parent's tree.
+We can pass props in both functional and class-based components.
+
+Steps for using props in functional components:
+Embed the child component to the parent component.
+Pass the props to the child component as an argument while embedding it to the parent component.
+In the child component, access the data variable value by writing the name or variable only.
+
+Same like HTML attributes we can have Custom attributes inside the components.
+
+// Passing props as a parameter
+// inside the child component
+import React from "react";
+
+function MyProducts(props) {
+  return (
+    <div>
+      <h1>{props.name}</h1>
+      <p>{props.description}</p>
+      <p>{props.price}</p>
+    </div>
+  );
+}
+
+export default MyProducts;
+
+import React, { Component } from "react";
+import Child from "./components/child.js";
+
+// Parent component
+// Embedding child component inside it
+import "./App.css";
+import MyProducts from "./MyProducts";
+function App() {
+  return (
+    <div className="App">
+      <MyProducts
+        name="temitope"
+        description="the product has fantastic features"
+        price={1000}
+      />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+React Hooks:
+Hooks are reusable functions that provide access to state in React Applications. Hooks were introduced in the 16.8 version of React.
+It allows developers to hook into the state and other React features without having to write a class component. 
+
+useState Hook: 
+useState declares a state variable that you can update directly.
+useState Hooks provides state variable with direct update access.
+const [count, setCount] = useState(0)
+
+If you’ve created a functional component in React and later need to add state or other React features that were previously only available in class components, you no
+longer have to convert it into a class component. With React Hooks, you can add state and other features directly to a functional component.
+
+Hooks like useState and useEffect enable you to manage state, side effects, and other logic within your existing functional components, making your code more concise and
+avoiding the need to rewrite components as classes.
+
+The Built-in React Hooks are:
+State Hooks
+Context Hooks
+Ref Hooks
+Effect Hooks
+Performance Hooks
+Resource Hooks 
+
+Important Hooks
+useState
+useEffect
+useContext
+useReducer
+useMemo
+useCallback
+useRef
+
+
+
+Higher Order Coponents:
+It is also known as HOC. In React, HOC is an advanced technique for reusing component logic.
+It is a function that takes a component and returns a new component.
+According to the official website, it is not the feature(part) in React API, but a pattern that emerges from React compositional nature.
+They are similar to JavaScript functions used for adding additional functionalities to the existing component.
+Whereas a component transforms props into UI, a higher-order component transforms a component into another component.
+
+const EnhancedComponent = higherOrderComponent(WrappedComponent);
+
+
+Life Cycle Methods of Components:
+The Component Lifecycle
+Each component has several “lifecycle methods” that you can override to run code at particular times in the process. You can use this lifecycle diagram as a cheat sheet. In the list below, commonly used lifecycle methods are marked as bold. The rest of them exist for relatively rare use cases.
+
+Mounting
+These methods are called in the following order when an instance of a component is being created and inserted into the DOM:
+
+constructor()
+static getDerivedStateFromProps()
+render()
+componentDidMount()
+
+Updating
+An update can be caused by changes to props or state. These methods are called in the following order when a component is being re-rendered:
+
+static getDerivedStateFromProps()
+shouldComponentUpdate()
+render()
+getSnapshotBeforeUpdate()
+componentDidUpdate()
+
+Unmounting
+This method is called when a component is being removed from the DOM:
+
+componentWillUnmount()
+Error Handling
+These methods are called when there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
+
+static getDerivedStateFromError()
+componentDidCatch()
+
+
+Redux/Zustand:
+
+Custom Hooks:
+
+
+Import & Exports:
+Default Export:
+A file can have only one default export.
+Default export cannot be imported using curly braces.
+Syntax: export default ComponentName;
+	export default Header;
+
+Default Import:
+While importing a default export we can name the import whatever we like.
+
+Syntax: import Anyname for the import from './path to the Component/File'
+	import Header from './components/Header'
+
+Named Export:
+A file can have multiple named exports.
+Each named export must be explicitly exported.
+Named export can be imported using curly braces only.
+export const NewComponenet = () => {
+}
+
+Named Import:
+import {ComponentName} from'./path to component;
+
+
+a component can have any number of return statements but it will return only one return value
+
+Docker

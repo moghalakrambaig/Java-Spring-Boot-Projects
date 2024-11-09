@@ -1,0 +1,17 @@
+hoisting
+let, var, const
+event loop
+set time out and set interval
+ES6 features
+promise and call back
+array.reverse
+shallow copy and deep copy
+closures
+map and reduce function
+
+
+hooks
+callback
+class based life cycle methods
+getderived state
+component did mount

@@ -1,0 +1,5 @@
+checked and unchecked exceptions
+java memory model and garbage collection
+design patterns
+multi threading in java
+debuging in java

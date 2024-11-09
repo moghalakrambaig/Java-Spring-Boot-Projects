@@ -1,0 +1,102 @@
+performance testing
+load runner
+jmeter
+
+Test Automation Framework Development: They design and implement automated testing frameworks that facilitate the automation of test cases. This includes selecting appropriate tools and technologies.
+Test Script Creation: Automation testers write scripts to automate test cases. This involves using programming languages and testing tools (e.g., Selenium, JUnit, TestNG) to create scripts that can execute tests automatically.
+Test Execution: They execute automated tests and monitor their performance, ensuring that they run correctly and efficiently.
+Defect Reporting: When automated tests fail, automation testers analyze the results, identify defects, and report them to the development team for resolution.
+Maintenance of Test Scripts: As the application evolves, automation testers update and maintain test scripts to ensure they remain effective and relevant.
+Collaboration: They work closely with developers, manual testers, and other stakeholders to understand application requirements and improve testing processes.
+Performance Testing: Some automation testers focus on performance testing, using tools to assess how an application behaves under various load conditions.
+Continuous Integration/Continuous Deployment (CI/CD): They often integrate automated tests into CI/CD pipelines to ensure that tests run automatically with each code change, helping to catch issues early in the development process.
+
+applications by automating repetitive testing tasks. Here are the key responsibilities:
+
+1. Test Automation Strategy:
+
+- Develop and implement a test automation strategy that aligns with the project requirements and goals.
+
+- Choose appropriate automation tools and frameworks based on the application under test.
+
+2. Script Development:
+
+- Write, maintain, and execute automated test scripts using programming languages (e.g., Python, Java, JavaScript) and automation tools (e.g., Selenium, Appium, TestNG).
+
+- Ensure that the scripts cover various test scenarios, including functional, regression, performance, and load testing.
+
+3. Test Frameworks:
+
+- Design and develop robust test frameworks that support reusable and maintainable automated test scripts.
+
+- Integrate the test framework with continuous integration/continuous deployment (CI/CD) pipelines (e.g., Jenkins, GitLab CI).
+
+4. Test Execution:
+
+- Execute automated test scripts regularly, typically as part of the CI/CD process.
+
+- Monitor test executions, analyze results, and report defects to the development team.
+
+5. Defect Management:
+
+- Log and track defects using bug tracking tools (e.g., JIRA, Bugzilla).
+
+- Collaborate with developers to ensure defects are resolved promptly and verify the fixes through re-execution of automated tests.
+
+6. Maintenance:
+
+- Update and maintain existing automated test scripts to reflect changes in the application.
+
+- Refactor scripts to improve efficiency and reliability.
+
+7. Documentation:
+
+- Document the automation process, test scripts, and results.
+
+- Create detailed test reports and metrics to communicate the status of automation efforts to stakeholders.
+
+8. Collaboration:
+
+- Work closely with manual testers, developers, and other stakeholders to understand requirements and ensure comprehensive test coverage.
+
+- Provide guidance and support to the testing team on best practices for test automation.
+
+9. Continuous Improvement:
+
+- Continuously evaluate and improve the test automation strategy and processes.
+
+- Stay updated with the latest trends and advancements in test automation tools and technologies.
+
+Is It a More Engaging Role Compared to a Regular Software Tester?
+
+Engagement Factors:
+
+1. Technical Complexity:
+
+- Automation Tester: Requires a higher level of technical skills, including programming, scripting, and understanding of test frameworks and tools. This can be more engaging for those who enjoy coding and technical challenges.
+
+- Manual Tester: Focuses on creating and executing manual test cases, which can be repetitive and less technically demanding.
+
+2. Innovation and Creativity:
+
+- Automation Tester: Involves designing and implementing innovative solutions for automating tests, optimizing test processes, and integrating with CI/CD pipelines. This can be creatively satisfying and intellectually stimulating.
+
+- Manual Tester: May involve exploratory testing and identifying edge cases, but the scope for technical innovation is generally more limited.
+
+3. Efficiency and Impact:
+
+- Automation Tester: Can significantly enhance testing efficiency and coverage, leading to faster feedback loops and higher-quality software. Seeing the impact of automation on the overall development process can be very rewarding.
+
+- Manual Tester: Plays a crucial role in finding defects that automated tests might miss, but the impact is often more incremental.
+
+4. Career Growth:
+
+- Automation Tester: Skills in test automation are highly sought after, leading to better career prospects and higher salaries. Opportunities to move into roles like DevOps, test architect, or software development are also more common.
+
+- Manual Tester: Career growth may be slower, and there may be fewer opportunities for advancement without transitioning to test automation or other technical roles.
+
+5. Collaboration and Learning:
+
+- Automation Tester: Often involves more collaboration with developers and DevOps teams, leading to a broader understanding of the software development lifecycle. Continuous learning is essential, keeping the role dynamic and engaging.
+
+- Manual Tester: Collaboration is still important, but the focus remains on testing from the user perspective, which can be less varied over time.

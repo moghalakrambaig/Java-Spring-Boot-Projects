@@ -1,0 +1,47 @@
+x64 AMD Based processor
+x86 ARM based processor
+
+Docker Commands:
+
+To check the Docker version installed on the computer
+docker -v
+docker --version
+
+To pull the image from Docker Hub or any other registry
+docker pull <imageName>
+
+To pull specific version of image
+docker pull <imageName>:tag
+
+To list all the images that are present on the system
+docker images
+
+To run the Image
+docker run --name <nameforthecontainer> -it(interactiveMode) -d(detach) <imageName>
+
+(-d) -  This flag causes Docker to start the container in "detached" mode. A simple way to think of this is to think of -d as running the container in "the background,"
+(-it) - The -it flag tells docker that it should open an interactive container instance
+
+To list all running containers
+docker ps
+
+To list all containers that are runing and stopped
+docker ps -a
+
+The docker exec command runs a new command in a running container
+docker exec -it <nameofthecontainer> COMMAND
+
+To exit from the container
+exit
+
+To stop a Container
+docker stop containerName or containerId
+
+To remove a container
+docker rm containerName or containerId
+
+To remove a image
+docker rmi imageName or imageId
+
+To restart a container
+docker restart containerName or containerId
